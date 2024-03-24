@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CastleMagic Castle Builders</title>
+</head>
+<body>
+    <nav class="nav">
+        <div id="burger-menu">
+            <span></span>
+          </div>
+          <a class="brand" href="#">CastleMagic</a>
+          <div id="menu" >
+              <ul class="nav-list">
+                <li><a href="videos.html">Videos</a></li>
+                <li><a href="#">Plans</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+              </ul>
+          </div>
+    </nav>
+    <section class="hero">
+        <h1>CastleMagic Castle Builders</h1>
+        <p class="lead">A source for building medieval style stone castles, plans, designs, and castles for sale.</p>
+        <div class="hero-btn">
+            <button class="button">Get In Touch!</button>
+            <button class="button">Castle Plans</button>
+        </div>
+    </section>
+    <section class="section">
+		<h2>What We Do</h2>
+		<p>Solid stone castles - Stone arched bridges - Cathedrals - Stone cottages - Medieval villages
+            Timber framing - Woodworking - Swimming pools/moats - Drawbridges - Masonry Heaters
+            Arched barns - Battlements - Keeps - Portcullis - Stone Towers - Arrow loopholes - Fireplaces</p>
+	</section>
+	<section class="section featured">
+	<h2>Featured Builds</h2>
+	<div class="gallery">
+	
+	<button class="card one" onclick="openModal('modal-1')">
+		<div class="img-place">
+			<img src="P6100153.JPG">
+		</div>
+		<h3>Castle Kataryna</h3>
+	</button>
+        <div id="modal-1" class="jw-modal">
+            <div class="jw-modal-body">
+                <h1>Castle Kataryna</h1>
+                <div class="modal-img">
+                    <img src="P6100153.JPG" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="close button" onclick="closeModal()">Close</button>
+            </div>
+        </div>
+        <button class="card two" onclick="openModal('modal-2')">
+            <div class="img-place">
+                <img src="lakecastle.jpg">
+            </div>
+            <h3>Castle Von Frandsen</h3>
+        </button>
+            <div id="modal-2" class="jw-modal">
+                <div class="jw-modal-body">
+                    <h1>A Castle modal popup</h1>
+                    <div class="modal-img">
+                        <img src="lakecastle.jpg" alt="">
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <button class="close button" onclick="closeModal()">Close</button>
+                </div>
+            </div>
+            <button class="card one" onclick="openModal('modal-3')">
+                <div class="img-place">
+                    <img src="History2.png">
+                </div>
+                <h3>History Channel Tower</h3>
+            </button>
+                <div id="modal-3" class="jw-modal">
+                    <div class="jw-modal-body">
+                        <h1>A river Castle modal popup</h1>
+                        <div class="modal-img">
+                            <img src="lakecastle.jpg" alt="">
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <button class="close" onclick="closeModal()">Close</button>
+                    </div>
+                </div>
+	</div>
+	</section>
+<!--Photo Gallery-->
+    <section class="section ">
+        <h2>Photo Gallery</h2>
+        <div class="photo-gallery">
+            
+   
+                
+                <div class="photo">
+                    <img src="lake.jpg">
+                </div>
+                <div class="photo ">
+                    <img src="P6100051.JPG">
+                </div>
+                <div class="photo ">
+                    <img src="RVEXT.jpg">
+                </div>
+                <div class="photo">
+                    <img src="DSC_0176.JPG">
+                </div>
+                <div class="photo ">
+                    <img src="P6100026.JPG">
+                </div>
+                <div class="photo ">
+                    <img src="night.jpg">
+                </div>
+                <div class="photo ">
+                    <img src="IMG_2809 (1).jpg">
+                </div>
+                <div class="photo">
+                    <img src="100_2720.JPG">
+                </div>
+                <div class="photo ">
+                    <img src="SWCastlefrombridge.jpg">
+                </div>
+                <div class="photo ">
+                    <img src="History2.png">
+                </div>
+                <div class="photo">
+                    <img src="lakecastle.jpg">
+                </div>
+                <div class="photo ">
+                    <img src="P6100153.JPG">
+                </div>
+        </div>
+        <button class="button" id="view-more" onclick="viewMore()">View More</button>
+    </section>
+    <section class="section featured">
+        <h2>How We Build</h2>
+        <div class="info-card">
+            <div class="info">
+                <img src="aHillCastleSW.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Hire us, and we will visit your site, design the plan, and build the castle.</p>
+                <p>Select your land to defend a castle. Terrain around a castle is just as important as designing interior and exterior elements of a castle. Best castle designs are created when the site shapes the structure.</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info">
+                <p>All castle designs may be created using your own ideas, our ideas, existing castles, our sample plans, or any combination of. The castle site itself often has the most effect on the creation of the castle design for each castle built.</p>
+                
+                    <button class="button">View Plans</button>
+            </div>
+            <div class="info">
+                <img src="Castleplan.png" alt="">
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info">
+                <img src="insulation.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>Our castle construction techniques are derived from a variety of sources, both ancient and modern. Our use of double stone walls as permanent formwork for concrete is a method which was used by the Romans in the early years of their Empire. The added tensile strength of reinforcing steel bars originates from modern concrete bridge construction. The use of modern cellular glass fireproof insulation inside the core of the double walls originates from classical heat transfer physics. The layout of timber trusses follows medieval timber structures. The use of pointed arch windows originated from seventh century Arabs and later adapted by Gothic master builders.</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info">
+                <p>Hire us, and we will visit your site, design the plan, and build the castle.</p>
+            </div>
+            <div class="info">
+                <iframe src="https://www.youtube.com/embed/ejoNGViMidg?si=4bRA3og9DylKWIr3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info">
+                <img src="Construction.jpg" alt="">
+            </div>
+            <div class="info">
+                <p>We do the the structure and interior and everything and such.</p>
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="info">
+                <h3>Ready to build your dream castle?</h3>
+                
+                    <button class="button">Get In Touch!</button>
+            </div>
+            <div class="info">
+                <img src="P6100051.JPG" alt="">
+            </div>
+        </div>
+    
+    </section>
+
+	<script src="index.js"></script>
+	</body>
+</html>
