@@ -1,56 +1,45 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 import {
-  Collapse,
   Navbar,
-  NavbarToggler,
   NavbarBrand,
+  Collapse,
+  NavbarToggler,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from 'reactstrap';
+} from "reactstrap";
+import { NavLink } from "react-router-dom";
 
-function Example(args) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-
+const NavBar = () => {
+  const [menuOpen, setMenuOpen] =useState(false);
   return (
-    <div>
-      <Navbar {...args}>
-        <NavbarBrand href="/">CastleMagic</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
+    <Navbar dark color="primary" sticky="top" expand="md">
+      <NavbarBrand className="ms-5" href="/">
+        {/* <img src={NucampLogo} alt="nucamp logo" className="float-start"/> */}
+        <h1 className="mt-1">CastleMagic</h1>
+      </NavbarBrand>
+
+      <NavbarToggler onClick={() => setMenuOpen(!menuOpen)} />
+      <Collapse isOpen={menuOpen} navbar>
+        <Nav className='ms-auto' navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+                <NavLink className='nav-link' to='/'>
+                <i class="fa fa-chess-rook"></i> Home
+                </NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
+                <NavLink className='nav-link' to='/faq'>
+                    <i className="fa-solid fa-rook fa-lg" /> FAQ
+                </NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-    </div>
+            <NavItem>
+                <NavLink className='nav-link' to='/gallery'>
+                <i className="fa fa-chess-rook fa-lg" /> Gallery
+                </NavLink>
+            </NavItem>
+        </Nav>
+      </Collapse>
+    </Navbar>
   );
 }
 
-export default Example;
+export default NavBar;
