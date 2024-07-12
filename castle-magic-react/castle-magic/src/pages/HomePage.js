@@ -5,6 +5,7 @@ import Hero from "../Components/Hero";
 import Error from "../Components/Error";
 import Loading from "../Components/Loading";
 import ImageCarousel from "../Components/ImageCarousel";
+import InfoCard from "../Components/InfoCard";
 
 const HomePage = () => {
   return (
@@ -13,9 +14,11 @@ const HomePage = () => {
       <Hero />
       <Container className="mt-5">
         <Specialties />
+        <InfoCard />
         <h2 className=" text-center">Featured Builds</h2>
         <CastlesList />
         <ImageCarousel />
+        
       </Container>
     </div>
   );

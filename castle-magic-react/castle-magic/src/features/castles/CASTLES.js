@@ -12,7 +12,8 @@ export const CASTLES = [
         image: kataryna,
         location: "Schweitzer Mountain",
         blurb: "Castle on mountain.",
-        description: "Long description of everything about this castle"
+        description: "Today's modern architecture and construction are now based on reverse building. As an example, today a home builder most often builds the house to the roof first and then glues imitation stone onto the building to attempt to give the illusion that the structure is strong as stone. However, the real and correct method is to stack the stones first and then build the house or roof on top of the strong base. Adding imitation stone work after the house is built or framed weakens and puts stress on the structure instead of adding strength."
+
     },
     {
         id: 1,
@@ -20,7 +21,7 @@ export const CASTLES = [
         image: lakeCastle,
         location: "Lake Pend Oreille",
         blurb: "Castle on the Lake.",
-        description: "Long description of everything about this castle"
+        description: "Today's modern architecture and construction are now based on reverse building. As an example, today a home builder most often builds the house to the roof first and then glues imitation stone onto the building to attempt to give the illusion that the structure is strong as stone. However, the real and correct method is to stack the stones first and then build the house or roof on top of the strong base. Adding imitation stone work after the house is built or framed weakens and puts stress on the structure instead of adding strength."
     },
     {
         id: 2,

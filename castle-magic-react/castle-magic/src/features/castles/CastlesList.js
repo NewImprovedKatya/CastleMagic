@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardBody, CardText, Col, Row } from 'reactstrap';
 import { CASTLES } from './CASTLES';
+import FeaturedCard from './FeaturedCard';
 
 const cards = [
   {
@@ -29,14 +30,7 @@ const CastlesList = () => {
     <Row xs={1} md={3} className=''>
       {CASTLES.map((card, index) => (
         <Col key={index} xs={12} className="mb-3">
-          <Card>
-            <CardHeader>{card.name}</CardHeader>
-            <CardBody>
-              <CardTitle>{card.title}</CardTitle>
-              <CardText>{card.description}</CardText>
-              <CardText>{card.blurb}</CardText>
-            </CardBody>
-          </Card>
+          <FeaturedCard castle={card} />
         </Col>
       ))}
     </Row>
