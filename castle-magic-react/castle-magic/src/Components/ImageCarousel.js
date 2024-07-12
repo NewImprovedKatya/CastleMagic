@@ -30,7 +30,7 @@ const items = [
   },
 ];
 
-const Gallery = () => {
+const ImageCarousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -71,13 +71,12 @@ const Gallery = () => {
   });
 
   return (
-    <Container>
-      <h2 className="text-center">Gallery</h2>
+    
       <Carousel
         activeIndex={activeIndex}
         next={next}
         previous={previous}
-        style={{ backgroundColor: "darkGray" }}
+        style={{ backgroundColor: "#505050", borderRadius: "5px" }}
         //   {...args}
       >
         <CarouselIndicators
@@ -97,8 +96,8 @@ const Gallery = () => {
           onClickHandler={next}
         />
       </Carousel>
-    </Container>
+    
   );
 };
 
-export default Gallery;
+export default ImageCarousel;
