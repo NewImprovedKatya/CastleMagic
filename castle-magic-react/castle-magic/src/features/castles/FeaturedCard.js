@@ -1,5 +1,7 @@
 import { useState } from "react";
 import {
+  Col,
+  Row,
   Card,
   CardImg,
   CardTitle,
@@ -36,9 +38,16 @@ const FeaturedCard = ({ castle }) => {
           <CardLink href="#">Another Link</CardLink>
         </CardBody>
       </Card>
-      <Modal isOpen={modal} toggle={toggle} >
+      <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>{name}</ModalHeader>
-        <ModalBody>{description}</ModalBody>
+        <ModalBody>
+          <Row xs={1} lg={2}>
+            <Col >{description}</Col>
+            <Col >
+              <img src={image} width={"100%"} />
+            </Col>
+          </Row>
+        </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={toggle}>
             Do Something

@@ -8,9 +8,9 @@ const Hero = () => {
     return (
         <header style={{ paddingLeft: 0 }}>
           <div
-            className=' text-center bg-image'
-            style={{ backgroundImage: `url(${heroCastle})`, height: 800, position: 'relative', backgroundSize: 'cover',
-    backgroundPosition: 'center' }}
+            className='hero text-center bg-image'
+    //         style={{ backgroundImage: `url(${heroCastle})`, height: 800, position: 'relative', backgroundSize: 'cover',
+    // backgroundPosition: 'center' }}
           >
             <div className='mask' style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', height: 800, width: "100%" }}>
               <Container className='d-flex justify-content-center align-items-center h-100'>

@@ -1,12 +1,12 @@
 body {
-  font-family: 'Work-Sans', sans-serif;
+  font-family: "Work-Sans", sans-serif;
 }
 
 h1,
 h2,
 h3,
 .card-body > .card-title {
-  font-family: 'Eagle Lake', serif;
+  font-family: "Eagle Lake", serif;
 }
 
 .card-title {
@@ -38,6 +38,18 @@ h2 {
 .navbar-brand {
   max-width: 4rem;
   margin-right: 2rem;
+}
+
+.hero {
+  background-image: url("../src/assets/images/hero-castle-sm.jpg");
+  background-image: -webkit-image-set(
+    url("../src/assets/images/hero-castle-med.jpg") 1x,
+    url("../src/assets/images/hero-castle-xs.jpg") 2x
+  );
+  height: 800;
+  position: relative;
+  background-size: cover;
+  background-position: center top;
 }
 
 /* .navbar-brand img {

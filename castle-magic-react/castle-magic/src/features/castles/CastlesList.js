@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardHeader, CardTitle, CardBody, CardText, Col, Row } from 'reactstrap';
-import { CASTLES } from './CASTLES';
+import { CASTLES } from '../../assets/information/CASTLES';
 import FeaturedCard from './FeaturedCard';
 
 const cards = [
