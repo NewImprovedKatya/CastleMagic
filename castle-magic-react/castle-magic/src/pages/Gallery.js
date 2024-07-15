@@ -3,7 +3,7 @@ import GalleryList from "../features/gallery/GalleryList";
 
 const Gallery = () => {
   return (
-    <Container>
+    <Container className="mt-5">
     <h2 className="text-center">Gallery</h2>
       <GalleryList />
     </Container>

@@ -19,7 +19,7 @@ function Faq(props) {
   };
 
   return (
-    <Container>
+    <Container className="mt-5">
         <h2 className='text-center'>Frequently Asked Questions</h2>
       <Accordion open={open} toggle={toggle}>
         {FAQS.map((faq, index) => (

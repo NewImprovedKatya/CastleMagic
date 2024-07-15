@@ -13,7 +13,7 @@ import contactPhoto from "../assets/images/hero-castle-sm.jpg";
 
 const Contact = () => {
   return (
-    <Container>
+    <Container className="mt-5">
       <h2>Contact Us</h2>
       <Row className="row-content">
         <Col sm="6">

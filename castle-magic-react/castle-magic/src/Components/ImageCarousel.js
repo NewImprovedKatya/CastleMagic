@@ -1,4 +1,3 @@
-import { Container, Row, Col } from "reactstrap";
 import React, { useState } from "react";
 import {
   Carousel,
@@ -7,30 +6,39 @@ import {
   CarouselIndicators,
   CarouselCaption,
 } from "reactstrap";
-import castle from "../app/assets/History2.png";
+import castleOne from "../assets/images/norman-castle-lg.jpg";
+import castleTwo from "../assets/images/sw-castle-lg.jpg";
+import castleThree from "../assets/images/mountain-castle-lg.jpg";
+import castleFour from "../assets/images/hero-castle-med.jpg";
 
 const items = [
   {
-    src: `${castle}`,
+    src: castleOne,
     altText: "Slide 1",
     caption: "Slide 1",
     key: 1,
   },
   {
-    src: "https://picsum.photos/id/456/1200/400",
+    src: castleTwo,
     altText: "Slide 2",
     caption: "Slide 2",
     key: 2,
   },
   {
-    src: "https://picsum.photos/id/678/1200/400",
+    src: castleThree,
     altText: "Slide 3",
     caption: "Slide 3",
     key: 3,
   },
+  {
+    src: castleFour,
+    altText: "Slide 3",
+    caption: "Slide 3",
+    key: 4,
+  },
 ];
 
-const ImageCarousel = () => {
+const ImageCarousel = (args) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
@@ -57,10 +65,14 @@ const ImageCarousel = () => {
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={item.src}
-        
       >
-        <div className="" style={{ height: "75vh" }}>
-          <img className="d-block w-100 h-100" src={item.src} alt={item.altText} style={{ objectFit: "contain" }}/>
+        <div className="" style={{ height: "75vh", width: "100" }}>
+          <img
+            className="d-block w-100 h-100"
+            src={item.src}
+            alt={item.altText}
+            style={{ objectFit: "cover" }}
+          />
         </div>
         <CarouselCaption
           captionText={item.caption}
@@ -71,33 +83,96 @@ const ImageCarousel = () => {
   });
 
   return (
-    
-      <Carousel
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      style={{ backgroundColor: "#9FA6B2", borderRadius: "20px" }}
+      className="my-5"
+      {...args}
+    >
+      <CarouselIndicators
+        items={items}
         activeIndex={activeIndex}
-        next={next}
-        previous={previous}
-        style={{ backgroundColor: "#505050", borderRadius: "5px" }}
-        //   {...args}
-      >
-        <CarouselIndicators
-          items={items}
-          activeIndex={activeIndex}
-          onClickHandler={goToIndex}
-        />
-        {slides}
-        <CarouselControl
-          direction="prev"
-          directionText="Previous"
-          onClickHandler={previous}
-        />
-        <CarouselControl
-          direction="next"
-          directionText="Next"
-          onClickHandler={next}
-        />
-      </Carousel>
-    
+        onClickHandler={goToIndex}
+      />
+      {slides}
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
+    </Carousel>
   );
 };
+
+/* const ImageCarousel = (args) => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const next = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const previous = () => {
+    if (animating) return;
+    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    setActiveIndex(nextIndex);
+  };
+
+  const goToIndex = (newIndex) => {
+    if (animating) return;
+    setActiveIndex(newIndex);
+  };
+
+  const slides = items.map((item) => {
+    return (
+      <CarouselItem
+        onExiting={() => setAnimating(true)}
+        onExited={() => setAnimating(false)}
+        key={item.src}
+      >
+        <img src={item.src} alt={item.altText} />
+        <CarouselCaption
+          captionText={item.caption}
+          captionHeader={item.caption}
+        />
+      </CarouselItem>
+    );
+  });
+
+  return (
+    <Carousel
+      activeIndex={activeIndex}
+      next={next}
+      previous={previous}
+      {...args}
+    >
+      <CarouselIndicators
+        items={items}
+        activeIndex={activeIndex}
+        onClickHandler={goToIndex}
+      />
+      {slides}
+      <CarouselControl
+        direction="prev"
+        directionText="Previous"
+        onClickHandler={previous}
+      />
+      <CarouselControl
+        direction="next"
+        directionText="Next"
+        onClickHandler={next}
+      />
+    </Carousel>
+  );
+}; */
 
 export default ImageCarousel;

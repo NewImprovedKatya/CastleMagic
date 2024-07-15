@@ -10,6 +10,7 @@ import NavBar from "./Components/NavBar";
 import Faq from "./pages/Faq";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import About from "./pages/About";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="faq" element={<Faq />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="about" element={<About />} />
       </Routes>
     </div>
   );

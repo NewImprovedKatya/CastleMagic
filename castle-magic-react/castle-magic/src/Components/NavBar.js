@@ -40,6 +40,13 @@ const NavBar = () => {
             <NavLink className="nav-link" to="/gallery">
               <i className="fa fa-chess-rook fa-lg" /> Gallery
             </NavLink>
+            
+          </NavItem>
+          <NavItem>
+            <NavLink className="nav-link" to="/about">
+              <i className="fa fa-chess-rook fa-lg" /> About
+            </NavLink>
+            
           </NavItem>
         </Nav>
       </Collapse>
